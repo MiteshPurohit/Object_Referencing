@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" "http://www.springframework.org/dtd/spring-beans-2.0.dtd" [
+<!ENTITY contextInclude SYSTEM "org/springframework/web/context/WEB-INF/contextInclude.xml">
+]>
+
+<beans>
+    
+    <bean id="tri" class="org.java.Triangle"> <!-- Bean of Triangle Class -->
+        <property name="pointA" ref="one"/> <!-- pointA bean is referencing to"one" bean-->
+        <property name="pointB" ref="two"/> <!-- pointB bean is referencing to"two" bean-->
+        <property name="pointC" ref="three"/> <!-- pointC bean is referencing to"three" bean-->
+    </bean>
+
+    <bean id="one" class="org.java.Point"> <!-- Bean of Point Class -->
+        <property name="x" value="0"/>
+        <property name="y" value="0"/>
+    </bean>
+    
+    <bean id="two" class="org.java.Point"> <!-- Bean of Point Class -->
+        <property name="x" value="0"/>
+        <property name="y" value="10"/>
+    </bean>
+    
+    <bean id="three" class="org.java.Point"> <!-- Bean of Point Class -->
+        <property name="x" value="10"/>
+        <property name="y" value="10"/>
+    </bean>
+</beans>
